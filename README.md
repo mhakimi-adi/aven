@@ -1,3 +1,6 @@
+# aven
+An application to hold a family of apps for tracking miscellaneous information about our lives
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
