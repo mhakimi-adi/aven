@@ -9,6 +9,8 @@ import SentimentSatisfiedTwoToneIcon from
     '@mui/icons-material/SentimentSatisfiedTwoTone';
 import SentimentVeryDissatisfiedTwoToneIcon from
     '@mui/icons-material/SentimentVeryDissatisfiedTwoTone';
+import SentimentNeutralTwoToneIcon from
+    '@mui/icons-material/SentimentNeutralTwoTone';
 
 export default function Page() {
     const [value, setValue] = React.useState(30);
@@ -18,12 +20,42 @@ export default function Page() {
         setValue(newValue);
     };
 
+    const marks = [
+        {
+            value: 1,
+            label: <SentimentSatisfiedTwoToneIcon
+                        sx={{
+                            fontSize: "5vh",
+                            width: "400%"
+                        }}
+                    />
+        },
+        {
+            value: 5,
+            label: <SentimentNeutralTwoToneIcon
+                        sx={{
+                            fontSize: "5vh",
+                            width: "400%"
+                        }}
+                    />
+        },
+        {
+            value: 10,
+            label: <SentimentVeryDissatisfiedTwoToneIcon
+                        sx={{
+                            fontSize: "5vh",
+                            width: "400%"
+                        }}
+                    />
+        }
+    ]
+
     return (
         <main className={styles.main}>
             <Box
                 sx={{
                     margin: "auto",
-                    width: "80%"
+                    width: "50%"
                 }}
             >
                 <Stack
@@ -31,11 +63,6 @@ export default function Page() {
                     direction="row"
                     alignItems="center"
                 >
-                    <SentimentSatisfiedTwoToneIcon
-                        sx={{
-                            fontSize: "25vh"
-                        }}
-                    />
 
                     <Slider
                         aria-label="Pain"
@@ -47,14 +74,11 @@ export default function Page() {
                         max={10}
                         step={1}
                         sx={{
-                            height: "10vh !important"
+                            height: "70vh !important",
+                            width: "75%"
                         }}
-                    />
-
-                    <SentimentVeryDissatisfiedTwoToneIcon
-                        sx={{
-                            fontSize: "25vh"
-                        }}
+                        orientation='vertical'
+                        marks={marks}
                     />
                 </Stack>
             </Box>

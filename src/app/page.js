@@ -25,7 +25,7 @@ export default function Home() {
             <CardContent>
               <WaterDropTwoToneIcon
                 sx={{
-                  fontSize: "50vh"
+                  fontSize: "20vh"
                 }}
               />
             </CardContent>
